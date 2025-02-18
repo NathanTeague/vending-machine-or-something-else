@@ -1,4 +1,5 @@
 import components.queue.Queue;
+import components.queue.Queue1L;
 
 class VendingMachine1L {
     /**
@@ -30,7 +31,7 @@ class VendingMachine1L {
      * Initial representation
      */
     private void createNewRep(int columns, int rows, int depth) {
-        this.vendingMachine = new Queue[columns][rows];
+        this.vendingMachine = new Queue1L<>[columns][rows];
         this.depth = depth;
         this.stock = 0;
     }
@@ -46,6 +47,8 @@ class VendingMachine1L {
 
         this.createNewRep(columns, rows, depth);
     }
+
+    public int size():
 
 }
 
