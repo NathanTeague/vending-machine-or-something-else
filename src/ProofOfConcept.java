@@ -94,6 +94,10 @@ class VendingMachine {
 
     /**
      * @return array with coordinates of item, "!", "-1" if item not in machine
+     *
+     *         TODO: I just realized this should be a Map.Pair and would make so
+     *         much of my code so much easier to write, so this is definitely
+     *         one of the first things I'm going to change.
      */
     public String[] coordinates(String item) {
         String[] coordinates = { "!", "-1" };
@@ -375,13 +379,18 @@ public final class ProofOfConcept {
         String yum = vending.buy("Cheetos");
         out.println(yum); //should be cheetos
 
-        vending.addStock("M&Ms"); //A0 should still be reserved for cheetos, so should be in A3
+        //A0 should still be reserved for cheetos, so should be in A3
+        vending.addStock("M&Ms");
 
-        vending.restockAll(); //full stock of all elements should be 6*4
+        //vending.restockAll(); //full stock of all elements should be 6*4
         out.println(vending.stock()); //should be 24
 
         String[] doritos = vending.buyAll("Doritos");
-        out.println(doritos[0] + doritos[1]);
+        int i = 0;
+        while (i < doritos.length) {
+            out.println(doritos[i]);
+            i++;
+        }
 
         out.println(vending.stock()); //should be 18
 
