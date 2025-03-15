@@ -13,3 +13,9 @@ the following form: YYYY.0M.0D.
 - Designed a vending machine component
 - Designed a Route Tracker component
 - Designed a Music Playlist component
+
+## [2025.02.20]
+
+### Added
+
+- Designed a proof of concept for vending machine component
